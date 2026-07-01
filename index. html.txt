@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Best Friends Photo Booth</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<!-- Floating Hearts -->
+<div class="floating-hearts">
+    <span>❤</span>
+    <span>♡</span>
+    <span>❤</span>
+    <span>♡</span>
+</div>
+
+<!-- ================= WELCOME ================= -->
+
+<section id="welcome" class="page active">
+
+    <div class="card">
+
+        <h1>📸</h1>
+
+        <h2>Long Distance Best Friends</h2>
+
+        <p>
+            Even if miles separate you,
+            memories never will.
+        </p>
+
+        <button id="startBtn">
+            Start Photo Booth
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= CAMERA ================= -->
+
+<section id="cameraPage" class="page">
+
+    <div class="camera-box">
+
+        <div class="camera-frame">
+
+            <video
+                id="video"
+                autoplay
+                muted
+                playsinline>
+            </video>
+
+            <div id="flash"></div>
+
+            <div id="countdown">
+                3
+            </div>
+
+            <div class="camera-overlay"></div>
+
+        </div>
+
+        <div class="camera-text">
+
+            <h2>Smile ❤️</h2>
+
+            <p>Taking 3 photos automatically</p>
+
+            <div class="progress">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PREVIEW ================= -->
+
+<section id="previewPage" class="page">
+
+    <div class="preview-card">
+
+        <h2>Your Memories</h2>
+
+        <div class="preview-grid">
+
+            <img id="img1">
+            <img id="img2">
+            <img id="img3">
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="retakeBtn">
+                🔄 Retake
+            </button>
+
+            <button id="continueBtn">
+                Continue →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= RESULT ================= -->
+
+<section id="resultPage" class="page">
+
+    <h2>Your Photo Booth Print</h2>
+
+    <div class="print-wrapper">
+
+        <canvas id="photoCanvas"></canvas>
+
+    </div>
+
+    <div class="buttons">
+
+        <button id="downloadBtn">
+            Download
+        </button>
+
+        <button id="againBtn">
+            Take Again
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Hidden Canvas -->
+
+<canvas id="captureCanvas" hidden></canvas>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
